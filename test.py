@@ -7,9 +7,9 @@ def download_ccminer(url):
     subprocess.run(["wget", url])
 
 # Get CPU model information
-# cpu_info = subprocess.check_output(["lscpu"]).decode("utf-8")
-# cpu_model_line = [line for line in cpu_info.split('\n') if "Model name" in line]
-cpu_model_line = ['Model name:          Cortex-A53', 'Model name:          Cortex-A72']
+cpu_info = subprocess.check_output(["lscpu"]).decode("utf-8")
+cpu_model_line = [line for line in cpu_info.split('\n') if "Model name" in line]
+# cpu_model_line = ['Model name:          Cortex-A53', 'Model name:          Cortex-A72']
 cpu_numbers = [line.split()[-1].split('-')[1].lower() for line in cpu_model_line]
 print(f"Your CPU: {cpu_numbers}", end="\n\n\n")
       
