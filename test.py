@@ -11,7 +11,7 @@ def download_ccminer(url):
 # cpu_model_line = [line for line in cpu_info.split('\n') if "Model name" in line]
 cpu_model_line = ['Model name:          Cortex-A53', 'Model name:          Cortex-A72']
 cpu_numbers = [line.split()[-1].split('-')[1].lower() for line in cpu_model_line]
-print(f'Your CPU: {cpu_numbers}", end="\n\n\n")
+print(f"Your CPU: {cpu_numbers}", end="\n\n\n")
       
 if len(cpu_numbers) > 0:
     ccminer_url = f"https://raw.githubusercontent.com/Darktron/pre-compiled/{cpu_numbers[1]}-{cpu_numbers[0]}/ccminer"
