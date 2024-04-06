@@ -2,6 +2,7 @@
 
 # Get CPU model information
 cpu_info=$(lscpu | grep "Model name")
+echo $echo
 
 # Function to download ccminer based on URL
 download_ccminer() {
