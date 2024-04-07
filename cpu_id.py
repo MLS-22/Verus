@@ -26,7 +26,8 @@ if response.status_code == 200:
     print("ccminer URL exists. Downloading...")
     download_ccminer(ccminer_url)
 else:
-    read = input("File not find, do you want to download default file ?")
+    read = input("File not found, do you want to download the generic file ?")
     if read == 'y':
-        ccminer_url = f"https://raw.githubusercontent.com/Darktron/pre-compiled/default/ccminer"
+        ccminer_url = f"https://raw.githubusercontent.com/Darktron/pre-compiled/generic/ccminer"
         response = requests.head(ccminer_url)
+        download_ccminer(ccminer_url)

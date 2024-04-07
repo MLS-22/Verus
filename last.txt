@@ -1,3 +1,5 @@
 yes | pkg update && pkg upgrade
 yes | pkg install libjansson wget nano python git
 https://github.com/MLS-22/Verus/blob/main/test.py
+
+cp ~/storage/downloads/cpu.py ~/
